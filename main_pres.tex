@@ -1,0 +1,106 @@
+\documentclass[10pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{xeCJK}
+\usepackage{graphicx}
+\usepackage {mathtools}
+\usepackage{utopia} %font utopia imported
+\usetheme{CambridgeUS}
+\usecolortheme{dolphin}
+
+% set colors
+\definecolor{myNewColorA}{RGB}{126,12,110}
+\definecolor{myNewColorB}{RGB}{165,85,154}
+\definecolor{myNewColorC}{RGB}{203,158,197}
+\setbeamercolor*{palette primary}{bg=myNewColorC}
+\setbeamercolor*{palette secondary}{bg=myNewColorB, fg = white}
+\setbeamercolor*{palette tertiary}{bg=myNewColorA, fg = white}
+\setbeamercolor*{titlelike}{fg=myNewColorA}
+\setbeamercolor*{title}{bg=myNewColorA, fg = white}
+\setbeamercolor*{item}{fg=myNewColorA}
+\setbeamercolor*{caption name}{fg=myNewColorA}
+\usefonttheme{professionalfonts}
+\usepackage{natbib}
+\usepackage{hyperref}
+%------------------------------------------------------------
+\titlegraphic{\includegraphics[height=1.5cm]{figures/CityULogo.png}}
+
+\setbeamerfont{title}{size=\large}
+\setbeamerfont{subtitle}{size=\small}
+\setbeamerfont{author}{size=\small}
+\setbeamerfont{date}{size=\small}
+\setbeamerfont{institute}{size=\small}
+\title[Higher School of Economics]{This is My Presentation!
+}
+\subtitle{Mi first presentation made in \LaTeX}
+\author[abc2-c]{Alexandr Mirzak}
+
+\institute[@edu.hse.ru]{ National Research Insitute Higher School of Economics}
+\date[27.07.2022]{27.07.2022}
+
+%------------------------------------------------------------
+%This block of commands puts the table of contents at the 
+%beginning of each section and highlights the current section:
+%\AtBeginSection[]
+%{
+%  \begin{frame}
+%    \frametitle{Contents}
+%    \tableofcontents[currentsection]
+%  \end{frame}
+%}
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+%------------------------------------------------------------
+
+\begin{document}
+
+
+\frame{\titlepage}
+\begin{frame}
+\frametitle{Contents}
+\tableofcontents
+\end{frame}
+%------------------------------------------------------------
+\section{Introduction}
+    \begin{frame}{Introduction}
+    
+    
+    Here is my introduction. Some interesting words to grab your attention 
+    And couple of these next words are \Huge REALLY HUGE 
+    \end{frame}
+    
+\section{Main Part}
+    \begin{frame}{Main Part}
+    \Huge Nice!
+    \Large Here lies all of the juice. This is really important information that you had never heard about. It's soooo useful!
+    \end{frame}
+    \begin{frame}{meme}
+    \centerline{} Here is a rather funny meme 4u!
+    \centering\includegraphics[height=6cm]{figures/meme.jpg}
+    \end{frame}
+
+
+\section{Conclusion}
+    \begin{frame}{Conclusion}
+     \huge Yeah, the meme was not that good, I agree
+     \tiny But I didn't manage to find any more \LaTeX memes :(
+    \end{frame}
+
+
+
+\section*{Acknowledgement}  
+\begin{frame}
+\textcolor{myNewColorA}{\large{\centerline{Anyway, Thank you for this course and my work evaluation!}}}
+\end{frame}
+
+\end{document}
+
+
+
